@@ -17,12 +17,12 @@ public class SalesManager {
         return max;
     }
 
-    public int trimAverage () {
-        int maxInAv = 0;
-        int minInAv = 0;
-        int sum = 0;
+    public long trimAverage () {
+        long maxInAv = 0;
+        long minInAv = 0;
+        long sum = 0;
 
-        for (int sale : sales) {
+        for (long sale : sales) {
             if (sale < maxInAv) {
                 maxInAv = sale;
             }
@@ -32,7 +32,7 @@ public class SalesManager {
             sum += sale;
         }
 
-        int result = (sum - maxInAv - minInAv) / (sales.length - 2);
+        long result = (sum - maxInAv - minInAv) / (sales.length - 2);
         return result;
         }
 
